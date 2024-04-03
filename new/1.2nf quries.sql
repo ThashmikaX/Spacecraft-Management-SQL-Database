@@ -18,10 +18,13 @@ CREATE TABLE IF NOT EXISTS launchvehicle (
     launchvehicle_id VARCHAR(10) NOT NULL PRIMARY KEY,
     manufacture VARCHAR(50),
     payload_capacity INT,
-    county_of_origin VARCHAR(20),
+    country_of_origin VARCHAR(20),
     capsule VARCHAR(20),
-    rocket VARCHAR(20)
+    rocket VARCHAR(20),
+    carry_launchvehicle_id VARCHAR(10),
+    CONSTRAINT fk_launchvehicle_carry FOREIGN KEY (carry_launchvehicle_id) REFERENCES launchvehicle(launchvehicle_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 CREATE TABLE IF NOT EXISTS launch (
     launch_id VARCHAR(10) NOT NULL PRIMARY KEY,

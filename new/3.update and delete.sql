@@ -19,7 +19,7 @@ UPDATE launchvehicle SET payload_capacity = 25000 WHERE launchvehicle_id = 'LV00
 UPDATE launchvehicle SET manufacture = 'NASA JPL' WHERE launchvehicle_id = 'LV002';
 
 -- Update and delete operations for launchsite table
-UPDATE launchsite SET altitude = 30.0 WHERE launchsite_id = 'LS001';
+UPDATE launchsite SET latitude = 30.0 WHERE launchsite_id = 'LS001';
 UPDATE launchsite SET longitude = -80.0 WHERE launchsite_id = 'LS002';
 
 -- Update and delete operations for launchprovider table

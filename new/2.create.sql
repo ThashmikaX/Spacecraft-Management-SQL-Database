@@ -18,13 +18,14 @@ INSERT INTO launchsite (launchsite_id, latitude , longitude) VALUES
 ('LS006', 5.216, -52.768);
 
 -- Populate launchvehicle table
-INSERT INTO launchvehicle (launchvehicle_id, manufacture, payload_capacity, county_of_origin, capsule, rocket) VALUES 
-('LV001', 'SpaceX', 22000, 'USA', 'Dragon', 'Falcon 9'),
-('LV002', 'NASA', 26900, 'USA', 'Orion', 'Space Launch System'),
-('LV003', 'ESA', 21000, 'Europe', 'Columbus', 'Ariane 5'),
-('LV004', 'Roscosmos', 22000, 'Russia', 'Soyuz', 'Soyuz'),
-('LV005', 'ISRO', 18000, 'India', 'Crew Module', 'GSLV Mk III'),
-('LV006', 'Blue Origin', 15800, 'USA', 'New Shepard', 'New Shepard');
+INSERT INTO launchvehicle (launchvehicle_id, manufacture, payload_capacity, country_of_origin, capsule, rocket, carry_launchvehicle_id) VALUES 
+('LV001', 'SpaceX', 22000, 'USA', 'Dragon', 'Falcon 9', NULL),
+('LV002', 'NASA', 26900, 'USA', 'Orion', 'Space Launch System', NULL),
+('LV003', 'ESA', 21000, 'Europe', 'Columbus', 'Ariane 5', NULL),
+('LV004', 'Roscosmos', 22000, 'Russia', 'Soyuz', 'Soyuz', NULL),
+('LV005', 'ISRO', 18000, 'India', 'Crew Module', 'GSLV Mk III', NULL),
+('LV006', 'Blue Origin', 15800, 'USA', 'New Shepard', 'New Shepard', 'LV001');
+
 
 -- Populate launch table
 INSERT INTO launch (launch_id, launchsite_id, payload_id, launchvehicle_id, date, time) VALUES 
