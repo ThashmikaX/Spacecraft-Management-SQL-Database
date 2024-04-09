@@ -71,7 +71,6 @@ SELECT * FROM launch_info NATURAL JOIN payload;
 explain SELECT * FROM launch_info NATURAL JOIN payload;
 
  -- 7.Left outer join operation tuning
-CREATE INDEX idx_payload_payload_id ON payload (payload_id);
 -- tuned query
 SELECT launch_info.*, payload.owner
 FROM launch_info
